@@ -1,10 +1,11 @@
 group = 'lt.lanweki.ainiuseva'
 
 dependencies {
+    api('org.springframework.boot:spring-boot-starter-data-jpa')
     testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    runtimeOnly 'org.postgresql:postgresql'
+    testImplementation('org.junit.jupiter:junit-jupiter')
+    runtimeOnly('org.postgresql:postgresql')
+    compileOnly('org.projectlombok:lombok:0.11.0')
 }
 
 test {
